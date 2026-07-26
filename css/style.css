@@ -330,12 +330,32 @@ button:hover{
 
     color:#2563EB;
 
-    font-size:1.8rem;
+    font-size:2rem;
 
-    font-weight:500;
+    font-weight:600;
 
-    min-height:40px;
+    min-height:60px;
 
-    margin-bottom:30px;
+    margin-bottom:35px;
+
+    line-height:1.4;
+
+}
+
+#typing-text::after{
+
+    content:"|";
+
+    animation:blink .8s infinite;
+
+}
+
+@keyframes blink{
+
+    50%{
+
+        opacity:0;
+
+    }
 
 }

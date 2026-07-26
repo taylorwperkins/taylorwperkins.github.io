@@ -1,38 +1,39 @@
-const titles = [
+const phrases = [
 
-    "Geospatial Developer",
+    "Building GIS Automation Tools...",
 
-    "GIS Analyst",
+    "Designing Spatial Analysis Workflows...",
 
-    "Spatial Data Automation",
+    "Developing Python Solutions...",
 
-    "Python Developer",
+    "Creating Web GIS Applications...",
 
-    "Spatial Intelligence"
+    "Transforming Spatial Data into Actionable Insights...",
+
+    "Applying AI to Geospatial Workflows..."
 
 ];
 
 const typingElement = document.getElementById("typing-text");
 
-let titleIndex = 0;
-
+let phraseIndex = 0;
 let characterIndex = 0;
-
 let deleting = false;
 
-function type(){
+function typePhrase(){
 
-    const currentTitle = titles[titleIndex];
+    const currentPhrase = phrases[phraseIndex];
 
     if(!deleting){
 
-        typingElement.textContent = currentTitle.substring(0,characterIndex++);
+        typingElement.textContent =
+            currentPhrase.substring(0, characterIndex++);
 
-        if(characterIndex > currentTitle.length){
+        if(characterIndex > currentPhrase.length){
 
             deleting = true;
 
-            setTimeout(type,1600);
+            setTimeout(typePhrase, 1800);
 
             return;
 
@@ -42,20 +43,22 @@ function type(){
 
     else{
 
-        typingElement.textContent = currentTitle.substring(0,--characterIndex);
+        typingElement.textContent =
+            currentPhrase.substring(0, --characterIndex);
 
-        if(characterIndex===0){
+        if(characterIndex === 0){
 
-            deleting=false;
+            deleting = false;
 
-            titleIndex=(titleIndex+1)%titles.length;
+            phraseIndex =
+                (phraseIndex + 1) % phrases.length;
 
         }
 
     }
 
-    setTimeout(type,deleting?40:80);
+    setTimeout(typePhrase, deleting ? 35 : 60);
 
 }
 
-type();
+typePhrase();
