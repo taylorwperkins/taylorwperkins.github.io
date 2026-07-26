@@ -110,6 +110,18 @@ nav a:hover{
 
     padding:0 10%;
 
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+
+    radial-gradient(circle at top left,#E0F2FE 0%,transparent 35%),
+
+    radial-gradient(circle at bottom right,#DBEAFE 0%,transparent 35%),
+
+    #F8FAFC;
+
 }
 
 .hero-content{
@@ -251,5 +263,79 @@ button:hover{
         flex-direction:column;
 
     }
+
+}
+
+.hero-content{
+
+    animation:fadeIn 1.3s ease;
+
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(25px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.scroll-indicator{
+
+    position:absolute;
+
+    bottom:40px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    font-size:2rem;
+
+    color:#2563EB;
+
+    animation:bounce 1.6s infinite;
+
+}
+
+@keyframes bounce{
+
+    0%,100%{
+
+        transform:translate(-50%,0);
+
+    }
+
+    50%{
+
+        transform:translate(-50%,10px);
+
+    }
+
+}
+
+#typing-text{
+
+    color:#2563EB;
+
+    font-size:1.8rem;
+
+    font-weight:500;
+
+    min-height:40px;
+
+    margin-bottom:30px;
 
 }
