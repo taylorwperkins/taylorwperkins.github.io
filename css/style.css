@@ -277,6 +277,14 @@ button:hover{
 
 }
 
+.buttons a{
+
+    display:inline-block;
+
+    text-decoration:none;
+
+}
+
 /* ========================================================= */
 /* STATISTICS                                                */
 /* ========================================================= */
@@ -823,5 +831,745 @@ footer{
         grid-template-columns:1fr;
 
     }
+
+}
+
+/* ===========================================
+   PROJECT PAGE - GENERAL
+=========================================== */
+
+.project-container{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:auto;
+
+}
+
+.project-hero{
+
+    padding:160px 0 100px;
+
+    background:linear-gradient(135deg,#eff6ff,#ffffff);
+
+}
+
+.project-category{
+
+    color:#2563EB;
+
+    font-weight:700;
+
+    text-transform:uppercase;
+
+    letter-spacing:2px;
+
+    margin-bottom:20px;
+
+}
+
+.project-hero h1{
+
+    font-size:3.5rem;
+
+    margin-bottom:25px;
+
+}
+
+.project-intro{
+
+    max-width:850px;
+
+    font-size:1.2rem;
+
+    line-height:1.8;
+
+    color:#4B5563;
+
+}
+
+.project-overview,
+
+.project-workflow,
+
+.project-contributions,
+
+.project-impact,
+
+.project-gallery,
+
+.project-technologies{
+
+    padding:100px 0;
+
+}
+
+/* ===========================================
+   TECHNOLOGY BADGES
+=========================================== */
+
+.project-badges,
+
+.tech-badges{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:14px;
+
+    margin-top:35px;
+
+}
+
+.project-badges span,
+
+.tech-badges span{
+
+    background:#2563EB;
+
+    color:white;
+
+    padding:10px 18px;
+
+    border-radius:999px;
+
+    font-size:.95rem;
+
+    transition:.25s;
+
+}
+
+.project-badges span:hover,
+
+.tech-badges span:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 8px 18px rgba(0,0,0,.15);
+
+}
+
+/* ===========================================
+   WORKFLOW
+=========================================== */
+
+.workflow{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+
+    align-items:start;
+
+    margin-top:60px;
+
+    position:relative;
+
+}
+
+.workflow-step{
+
+    flex:1;
+
+    text-align:center;
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+.workflow-step{
+
+    position:relative;
+
+}
+
+.workflow-step:not(:last-child)::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:35px;
+
+    right:-25px;
+
+    width:50px;
+
+    height:4px;
+
+    background:#2563EB;
+
+    border-radius:4px;
+
+    transform:scaleX(0);
+
+    transform-origin:left;
+
+    transition:transform .6s ease;
+
+}
+
+.workflow-step:hover::after{
+
+    transform:scaleX(1);
+
+}
+
+.workflow-step:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.workflow-icon{
+
+    width:72px;
+
+    height:72px;
+
+    border-radius:50%;
+
+    background:white;
+
+    border:5px solid #2563EB;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:2rem;
+
+    margin:0 auto 25px;
+
+    transition:.35s;
+
+}
+
+.workflow-step:hover .workflow-icon{
+
+    transform:scale(1.12);
+
+    background:#2563EB;
+
+    color:white;
+
+}
+
+.workflow-arrow{
+
+    display:none;
+
+}
+
+/* ===========================================
+   CONTRIBUTION CARDS
+=========================================== */
+
+.contribution-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:30px;
+
+    margin-top:60px;
+
+}
+
+.contribution-card{
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:35px;
+
+    box-shadow:0 8px 24px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+    border-top:5px solid #2563EB;
+
+}
+
+.contribution-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 14px 34px rgba(0,0,0,.12);
+
+}
+
+.contribution-icon{
+
+    font-size:2rem;
+
+    margin-bottom:20px;
+
+}
+
+.contribution-card h3{
+
+    margin-bottom:15px;
+
+}
+
+.contribution-card p{
+
+    line-height:1.7;
+
+    color:#4B5563;
+
+}
+
+/* ===========================================
+   IMPACT CARDS
+=========================================== */
+
+.impact-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:30px;
+
+    margin-top:60px;
+
+}
+
+.impact-card{
+
+    background:#ffffff;
+
+    border-radius:18px;
+
+    padding:35px;
+
+    text-align:center;
+
+    box-shadow:0 8px 24px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.impact-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.impact-icon{
+
+    font-size:2.5rem;
+
+    margin-bottom:20px;
+
+}
+
+.impact-card h3{
+
+    margin-bottom:15px;
+
+}
+
+.impact-card p{
+
+    line-height:1.7;
+
+    color:#4B5563;
+
+}
+
+/* ===========================================
+   GALLERY
+=========================================== */
+
+.gallery-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+    gap:35px;
+
+    margin-top:60px;
+
+}
+
+.gallery-card{
+
+    background:white;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    box-shadow:0 8px 24px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+    cursor:pointer;
+
+}
+
+.gallery-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.gallery-card img{
+
+    width:100%;
+
+    display:block;
+
+    transition:.4s;
+
+}
+
+.gallery-card:hover img{
+
+    transform:scale(1.04);
+
+}
+
+.gallery-card figcaption{
+
+    padding:25px;
+
+    line-height:1.7;
+
+    color:#4B5563;
+
+}
+
+/* ===========================================
+   LIGHTBOX
+=========================================== */
+
+.lightbox{
+
+    display:none;
+
+    position:fixed;
+
+    z-index:9999;
+
+    left:0;
+
+    top:0;
+
+    width:100%;
+
+    height:100%;
+
+    background:rgba(0,0,0,.92);
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-direction:column;
+
+    padding:40px;
+
+}
+
+.lightbox-image{
+
+    max-width:90%;
+
+    max-height:80vh;
+
+    border-radius:12px;
+
+    box-shadow:0 10px 40px rgba(0,0,0,.45);
+
+}
+
+.lightbox-close{
+
+    position:absolute;
+
+    top:25px;
+
+    right:40px;
+
+    color:white;
+
+    font-size:3rem;
+
+    cursor:pointer;
+
+}
+
+#lightbox-caption{
+
+    color:white;
+
+    margin-top:25px;
+
+    max-width:900px;
+
+    text-align:center;
+
+    line-height:1.7;
+
+}
+
+/* ===========================================
+   PROJECT METADATA
+=========================================== */
+
+.project-metadata{
+
+    padding:70px 0;
+
+    background:#F8FAFC;
+
+}
+
+.metadata-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:25px;
+
+}
+
+.metadata-card{
+
+    background:white;
+
+    border-radius:16px;
+
+    padding:25px;
+
+    box-shadow:0 8px 24px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+    border-left:5px solid #2563EB;
+
+}
+
+.metadata-card h3{
+
+    color:#2563EB;
+
+    margin-bottom:10px;
+
+    font-size:1rem;
+
+}
+
+.metadata-card p{
+
+    line-height:1.6;
+
+    color:#4B5563;
+
+}
+
+/* ===========================================
+   WORKFLOW TIMELINE
+=========================================== */
+
+.workflow-timeline{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+    gap:40px;
+
+    position:relative;
+
+    margin-top:70px;
+
+}
+
+.workflow-timeline::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:36px;
+
+    left:8%;
+
+    right:8%;
+
+    height:4px;
+
+    background:#D6E4FF;
+
+    border-radius:10px;
+
+    z-index:0;
+
+}
+
+/* ==========================================
+   ANIMATED WORKFLOW TIMELINE
+========================================== */
+
+.workflow-timeline{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    justify-content:space-between;
+
+    gap:0;
+
+    position:relative;
+
+    margin-top:70px;
+
+}
+
+.timeline-connector{
+
+    flex:1;
+
+    height:5px;
+
+    background:#D1D5DB;
+
+    margin-top:42px;
+
+    border-radius:999px;
+
+    overflow:hidden;
+
+    position:relative;
+
+}
+
+.timeline-fill{
+
+    width:0;
+
+    height:100%;
+
+    background:#2563EB;
+
+    border-radius:999px;
+
+    transition:width .9s ease;
+
+}
+
+.workflow-step{
+
+    max-width:240px;
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+    transition:all .7s ease;
+
+}
+
+.workflow-step.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+.workflow-icon{
+
+    width:82px;
+
+    height:82px;
+
+    margin:auto;
+
+    margin-bottom:25px;
+
+    border-radius:50%;
+
+    background:white;
+
+    border:4px solid #2563EB;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:2rem;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    transition:.45s;
+
+}
+
+.workflow-icon{
+
+    width:82px;
+
+    height:82px;
+
+    margin:auto;
+
+    margin-bottom:25px;
+
+    border-radius:50%;
+
+    background:white;
+
+    border:4px solid #2563EB;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:2rem;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    transform:scale(.75);
+
+    transition:
+
+        transform .45s ease,
+
+        box-shadow .45s ease;
+
+}
+
+.workflow-icon.active{
+
+    transform:scale(1);
+
+    box-shadow:0 0 35px rgba(37,99,235,.35);
 
 }
