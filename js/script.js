@@ -71,9 +71,9 @@ if (typingElement) {
    IMAGE LIGHTBOX
 =========================================== */
 
-if (galleryImages.length > 0) {
+const galleryImages = document.querySelectorAll(".gallery-card img");
 
-    const galleryImages = document.querySelectorAll(".gallery-card img");
+if (galleryImages.length > 0) {
 
     const lightbox = document.getElementById("lightbox");
 
@@ -83,18 +83,62 @@ if (galleryImages.length > 0) {
 
     const closeLightbox = document.querySelector(".lightbox-close");
 
-    galleryImages.forEach(image => {
+    let currentImageIndex = 0;
 
-        image.addEventListener("click", () => {
+    const previousButton =
+    document.querySelector(".lightbox-prev");
 
-            lightbox.style.display = "flex";
+    const nextButton =
+    document.querySelector(".lightbox-next");
 
-            lightboxImage.src = image.src;
+    function showImage(index){
+
+        lightboxImage.classList.add("fade");
+
+        setTimeout(()=>{
+
+            lightboxImage.src =
+                galleryImages[index].src;
 
             lightboxCaption.textContent =
-                image.parentElement.querySelector("figcaption").textContent;
+                galleryImages[index]
+                    .parentElement
+                    .querySelector("figcaption")
+                    .textContent;
+
+            lightboxImage.classList.remove("fade");
+
+        },170);
+
+    }
+
+    galleryImages.forEach((image,index)=>{
+
+        image.addEventListener("click",()=>{
+
+            currentImageIndex=index;
+
+            showImage(currentImageIndex);
+
+            lightbox.style.display="flex";
 
         });
+
+    });
+
+    previousButton.addEventListener("click", () => {
+
+        currentImageIndex = (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
+
+        showImage(currentImageIndex);
+
+    });
+
+    nextButton.addEventListener("click", () => {
+
+        currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
+
+        showImage(currentImageIndex);
 
     });
 
@@ -116,9 +160,23 @@ if (galleryImages.length > 0) {
 
     document.addEventListener("keydown",(e)=>{
 
+        if(lightbox.style.display!=="flex") return;
+
         if(e.key==="Escape"){
 
             lightbox.style.display="none";
+
+        }
+
+        if(e.key==="ArrowLeft"){
+
+            previousButton.click();
+
+        }
+
+        if(e.key==="ArrowRight"){
+
+            nextButton.click();
 
         }
 

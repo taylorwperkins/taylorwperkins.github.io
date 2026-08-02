@@ -1330,6 +1330,72 @@ footer{
 
 }
 
+.lightbox-prev,
+.lightbox-next{
+
+    position:absolute;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    width:58px;
+
+    height:58px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.18);
+
+    color:white;
+
+    font-size:2rem;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    backdrop-filter:blur(8px);
+
+}
+
+.lightbox-prev{
+
+    left:35px;
+
+}
+
+.lightbox-next{
+
+    right:35px;
+
+}
+
+.lightbox-prev:hover,
+.lightbox-next:hover{
+
+    background:#2563EB;
+
+    transform:translateY(-50%) scale(1.08);
+
+}
+
+.lightbox-image{
+
+    opacity:1;
+
+    transition:opacity .35s ease;
+
+}
+
+.lightbox-image.fade{
+
+    opacity:0;
+
+}
+
 /* ===========================================
    PROJECT METADATA
 =========================================== */
