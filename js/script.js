@@ -68,6 +68,57 @@ if (typingElement) {
 }
 
 /* ===========================================
+   SCROLL REVEAL ANIMATIONS
+=========================================== */
+
+const revealElements = document.querySelectorAll(
+
+    ".stat-card, \
+     .about-text, \
+     .about-card, \
+     .project-card, \
+     .metadata-card, \
+     .workflow-step, \
+     .contribution-card, \
+     .impact-card, \
+     .gallery-card, \
+     .tech-badges span"
+
+);
+
+revealElements.forEach(element => {
+
+    element.classList.add("reveal");
+
+});
+
+const revealObserver = new IntersectionObserver(entries => {
+
+    entries.forEach(entry => {
+
+        if(entry.isIntersecting){
+
+            entry.target.classList.add("show");
+
+            revealObserver.unobserve(entry.target);
+
+        }
+
+    });
+
+},{
+
+    threshold:0.15
+
+});
+
+revealElements.forEach(element => {
+
+    revealObserver.observe(element);
+
+});
+
+/* ===========================================
    IMAGE LIGHTBOX
 =========================================== */
 
@@ -209,8 +260,6 @@ if(workflowSection){
                 steps.forEach((step,index)=>{
 
                     setTimeout(()=>{
-
-                        step.classList.add("show");
 
                         step.querySelector(".workflow-icon")
                             .classList.add("active");
