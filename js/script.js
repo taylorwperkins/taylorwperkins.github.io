@@ -275,7 +275,7 @@ if(workflowSection){
                         connector.querySelector(".timeline-fill")
                                  .style.width = "100%";
 
-                    },(index+1)*350);
+                    },(index * 350) + 175);
 
                 });
 
