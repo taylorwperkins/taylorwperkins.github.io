@@ -292,3 +292,45 @@ if(workflowSection){
     observer.observe(workflowSection);
 
 }
+
+/* ===========================================
+   GENERAL SCROLL REVEAL ANIMATION
+=========================================== */
+
+const revealElements = document.querySelectorAll(".reveal");
+
+
+if(revealElements.length > 0){
+
+    const revealObserver = new IntersectionObserver(
+        
+        entries => {
+
+            entries.forEach(entry => {
+
+                if(entry.isIntersecting){
+
+                    entry.target.classList.add("show");
+
+                }
+
+            });
+
+        },
+
+        {
+
+            threshold:0.15
+
+        }
+
+    );
+
+
+    revealElements.forEach(element => {
+
+        revealObserver.observe(element);
+
+    });
+
+}
