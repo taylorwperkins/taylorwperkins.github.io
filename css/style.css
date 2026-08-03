@@ -341,8 +341,6 @@ button:hover{
 
 }
 
-
-
 /* ========================================================= */
 /* ABOUT SECTION                                             */
 /* ========================================================= */
@@ -2058,18 +2056,5 @@ footer{
     color:white;
 
     box-shadow:0 0 30px rgba(37,99,235,.30);
-
-}
-
-# temporary
-.experience-card{
-
-    background:white;
-
-    border-radius:18px;
-
-    padding:35px;
-
-    box-shadow:0 8px 24px rgba(0,0,0,.08);
 
 }
