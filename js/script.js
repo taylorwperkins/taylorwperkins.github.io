@@ -303,6 +303,8 @@ if(workflowSection){
 
                     setTimeout(()=>{
 
+                        step.classList.add("show");
+
                         step.querySelector(".workflow-icon")
                             .classList.add("active");
 
