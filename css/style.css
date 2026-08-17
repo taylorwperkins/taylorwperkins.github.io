@@ -413,7 +413,7 @@ button:hover{
 
     background:#F8FAFC;
 
-    border-radius:20px;
+    border-radius:18px;
 
     padding:35px;
 
@@ -1466,7 +1466,7 @@ footer{
 
     background:white;
 
-    border-radius:16px;
+    border-radius:18px;
 
     padding:25px;
 
@@ -1707,7 +1707,91 @@ footer{
 
     color:#2563EB;
 
+    margin:0;
+
+}
+
+
+
+.skill-heading{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
     margin-bottom:25px;
+
+}
+
+.skill-heading h3{
+
+    margin:0;
+
+}
+
+.skill-icon{
+
+    width:46px;
+
+    height:46px;
+
+    flex-shrink:0;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:#DBEAFE;
+
+    color:#2563EB;
+
+    border-radius:12px;
+
+    transition:
+
+        transform .3s ease,
+
+        background .3s ease,
+
+        color .3s ease;
+
+}
+
+.skill-icon svg{
+
+    width:24px;
+
+    height:24px;
+
+}
+
+.skill-category:nth-child(1) .skill-icon{
+    color:#2563EB;
+}
+
+.skill-category:nth-child(2) .skill-icon{
+    color:#7C3AED;
+}
+
+.skill-category:nth-child(3) .skill-icon{
+    color:#059669;
+}
+
+.skill-category:nth-child(4) .skill-icon{
+    color:#EA580C;
+}
+
+.skill-category:hover .skill-icon{
+
+    transform:scale(1.08);
+
+    background:#2563EB;
+
+    color:white;
 
 }
 
@@ -1835,7 +1919,17 @@ footer{
 
 }
 
+.awards-instruction{
 
+    color:#6B7280;
+
+    margin-top:-30px;
+
+    margin-bottom:40px;
+
+    font-size:1rem;
+
+}
 
 .award-grid{
 
@@ -1890,6 +1984,298 @@ footer{
     color:#4B5563;
 
     line-height:1.8;
+
+}
+
+.award-image{
+
+    width:100%;
+
+    height:180px;
+
+    overflow:hidden;
+
+    border-radius:12px;
+
+    margin-bottom:25px;
+
+    background:#F8FAFC;
+
+}
+
+.award-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+.award-placeholder{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border:2px dashed #CBD5E1;
+
+    color:#64748B;
+
+    font-weight:600;
+
+}
+
+.award-content h3{
+
+    margin-bottom:10px;
+
+}
+
+.award-organization{
+
+    color:#2563EB !important;
+
+    font-weight:600;
+
+    font-size:.95rem;
+
+    margin-bottom:12px !important;
+
+}
+
+/* =========================================================
+   FEATURED ARTICLE
+========================================================= */
+
+.article-feature{
+
+    width:90%;
+
+    max-width:1100px;
+
+    margin:70px auto 0;
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:45px;
+
+    box-shadow:0 8px 24px rgba(0,0,0,.08);
+
+    text-align:center;
+
+}
+
+.article-feature-content{
+
+    max-width:950px;
+
+    margin:auto;
+
+}
+
+.article-label{
+
+    color:#2563EB;
+
+    font-size:.9rem;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    margin-bottom:12px;
+
+}
+
+.article-feature h3{
+
+    color:#2563EB;
+
+    font-size:1.7rem;
+
+    margin-bottom:12px;
+
+}
+
+.article-feature p{
+
+    color:#4B5563;
+
+    line-height:1.7;
+
+    margin-bottom:25px;
+
+}
+
+.article-feature-image{
+
+    width:100%;
+
+    max-height:600px;
+
+    object-fit:contain;
+
+    margin:0 auto 25px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+}
+
+.article-link{
+
+    display:inline-block;
+
+    background:#2563EB;
+
+    color:white;
+
+    padding:13px 26px;
+
+    border-radius:12px;
+
+    font-weight:600;
+
+    transition:.25s;
+
+}
+
+.article-link:hover{
+
+    background:#1D4ED8;
+
+    transform:translateY(-3px);
+
+}
+
+/* ==========================================
+   AWARDS IMAGE LIGHTBOX
+========================================== */
+
+.award-lightbox{
+
+    display:none;
+
+    position:fixed;
+
+    z-index:9999;
+
+    inset:0;
+
+    background:rgba(0,0,0,.92);
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:40px;
+
+}
+
+.award-lightbox-content{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    max-width:90%;
+
+    max-height:90vh;
+
+}
+
+.award-lightbox-image{
+
+    max-width:100%;
+
+    max-height:80vh;
+
+    object-fit:contain;
+
+    border-radius:10px;
+
+    box-shadow:0 10px 40px rgba(0,0,0,.45);
+
+}
+
+.award-lightbox-close{
+
+    position:absolute;
+
+    top:25px;
+
+    left:30px;
+
+    width:55px;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.18);
+
+    color:white;
+
+    font-size:2rem;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.award-lightbox-close:hover{
+
+    background:#2563EB;
+
+    transform:scale(1.08);
+
+}
+
+.award-lightbox-link{
+
+    display:none;
+
+    margin-top:20px;
+
+    padding:12px 22px;
+
+    background:#2563EB;
+
+    color:white;
+
+    border-radius:10px;
+
+    font-weight:600;
+
+    transition:.25s;
+
+}
+
+.award-lightbox-link:hover{
+
+    background:#1D4ED8;
+
+    transform:translateY(-3px);
 
 }
 

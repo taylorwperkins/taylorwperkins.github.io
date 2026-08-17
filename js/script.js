@@ -184,6 +184,99 @@ if (galleryImages.length > 0) {
 
 }
 
+/* =========================================== 
+    AWARDS IMAGE LIGHTBOX 
+=========================================== */ 
+
+const awardImages = 
+document.querySelectorAll(".award-image img"); 
+
+if (awardImages.length > 0) { 
+    
+    const awardLightbox = 
+    document.getElementById("award-lightbox"); 
+    
+    const awardLightboxImage = 
+    document.getElementById("award-lightbox-image"); 
+    
+    const awardLightboxClose = 
+    document.querySelector(".award-lightbox-close"); 
+    
+    const awardLightboxLink = 
+    document.getElementById("award-lightbox-link"); 
+    
+    
+    awardImages.forEach(image => { 
+
+        if (image.classList.contains("article-award-image")) return;
+
+        image.addEventListener("click", () => { 
+            
+            awardLightboxImage.src = image.src; 
+            
+            awardLightboxImage.alt = image.alt; 
+            
+            
+            /* 
+             * Check whether this is the newspaper 
+             * article image. 
+             */ 
+            
+            if (image.classList.contains("article-award-image")) { 
+                
+                awardLightboxLink.href = 
+                "https://www.lowellsun.com/2022/07/08/sturgeon-perkins-lead-chelmsford-high-team-at-umass-lowell-united-nations-conference/"; 
+                
+                awardLightboxLink.style.display = "inline-block"; 
+            
+            } 
+                
+            else { 
+                
+                awardLightboxLink.style.display = "none"; 
+            
+            } 
+            
+            
+            awardLightbox.style.display = "flex"; 
+        
+        }); 
+    
+    }); 
+    
+    
+    awardLightboxClose.addEventListener("click", () => { 
+        
+        awardLightbox.style.display = "none"; 
+    
+    }); 
+    
+    
+    awardLightbox.addEventListener("click", (e) => { 
+        
+        if (e.target === awardLightbox) { 
+            
+            awardLightbox.style.display = "none"; 
+        
+        } 
+    
+    }); 
+    
+    
+    document.addEventListener("keydown", (e) => { 
+        
+        if (awardLightbox.style.display !== "flex") return; 
+        
+        if (e.key === "Escape") { 
+            
+            awardLightbox.style.display = "none"; 
+        
+        } 
+    
+    }); 
+
+}
+
 /* ===========================================
    WORKFLOW TIMELINE ANIMATION
 =========================================== */
