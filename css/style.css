@@ -242,6 +242,13 @@ nav a:hover{
 
 /* Name */
 
+.hero .hero-content .hero-label{
+
+    font-size:5rem;
+
+}
+
+
 .hero h1{
 
     font-size:5rem;
@@ -1009,6 +1016,13 @@ footer{
 
     /* Name */
 
+    .hero .hero-content .hero-label{
+
+        font-size:4.5rem;
+
+    }
+
+
     .hero h1{
 
         font-size:3.5rem;
@@ -1035,7 +1049,7 @@ footer{
     }
 
 
-    /* GIS • Data Automation • Spatial Intelligence */
+    /* GIS • Mapping • Data Automation • Spatial Intelligence */
 
     .hero-subtitle{
 
